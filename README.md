@@ -15,7 +15,7 @@ The prompt will update accordingly for every untracked files created, or any tra
 
 ---
 
-Now the repo is 2 commits head. After pushing the changes, the repo status has reset have to **`clean`**.
+Now the repo is 2 commits head. After pushing the changes, the repo status is reset to **`clean`**.
 ![Example3](/images/3.png?raw=true)
 
 ---
@@ -23,6 +23,7 @@ Now the repo is 2 commits head. After pushing the changes, the repo status has r
 Any merge conflicts will be displayed in a big red warning, and won't go away until it's fixed.
 ![Example4](/images/4.png?raw=true)
 
+---
 
 ## Installation:
 For **`oh-my-zsh`** users, simply copy **`git-shell-info.zsh-theme`** to **`~/.oh-my-zsh/themes/`** and add **`ZSH_THEME="git-shell-info"`** to **`~/.zshrc`**.
