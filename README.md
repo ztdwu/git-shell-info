@@ -28,4 +28,4 @@ Any merge conflicts will be displayed in a big red warning, and won't go away un
 ## Installation:
 For **`oh-my-zsh`** users, simply copy **`git-shell-info.zsh-theme`** to **`~/.oh-my-zsh/themes/`** and add **`ZSH_THEME="git-shell-info"`** to **`~/.zshrc`**.
 
-For non **`oh-my-zsh`** users, there is also a **`git-shell-info.sh`** script that does basically the same thing, but you'll have to manually embed it into the prompt definition of your shell's configuration. For example, in **`bash`**, open **`~/.bashrc`** and find the line **`PS1=...`**, call place a call to **`$(git-shell-info.sh)`** somewhere inside the definition.
+For non **`oh-my-zsh`** users, there is also a **`git-shell-info.sh`** script that does basically the same thing, but you'll have to manually embed it into the prompt definition of your shell's configuration. For example, in **`bash`**, open **`~/.bashrc`** and find the line **`PS1=...`**, then place a call to **`$(git-shell-info.sh)`** somewhere inside the definition.
