@@ -36,6 +36,17 @@ function git_prompt() {
         if [[ -n "$typechange" && "$typechange" != "0" ]]; then printf "${fg_bold[cyan]}(τ${typechange})";  fi
         if [[ -n "$untracked"  && "$untracked"  != "0" ]]; then printf "${fg_bold[yellow]}(●${untracked})"; fi
     fi
+
+    if [[ -n "$GIT_SHELL_SHOW_STASHES" || -n "$GIT_SHELL_SHOW_STASHES_VERBOSE" ]]; then
+        stashes=$(git stash list 2>/dev/null | wc -l)
+        if [[ -n "$stashes" && "$stashes" != "0" ]]; then
+            printf " ${fg_bold[white]}(${stashes}";
+            if [[ -n "$GIT_SHELL_SHOW_STASHES_VERBOSE" ]]; then
+                printf " stashed"
+            fi
+            printf ")"
+        fi
+    fi
 }
 
 function git_status() {
