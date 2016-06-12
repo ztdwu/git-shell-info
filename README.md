@@ -29,3 +29,6 @@ Any merge conflicts will be displayed in a big red warning, and won't go away un
 For **`oh-my-zsh`** users, simply copy **`git-shell-info.zsh-theme`** to **`~/.oh-my-zsh/themes/`** and add **`ZSH_THEME="git-shell-info"`** to **`~/.zshrc`**.
 
 For non **`oh-my-zsh`** users, there is also a **`git-shell-info.sh`** script that does basically the same thing, but you'll have to manually embed it into the prompt definition of your shell's configuration. For example, in **`bash`**, open **`~/.bashrc`** and find the line **`PS1=...`**, then place a call to **`$(git-shell-info.sh)`** somewhere inside the definition.
+
+## Note:
+By default, the number of stashes is hidden from prompt display. To enable this feature, export one of the variables `GIT_SHELL_SHOW_STASHES_VERBOSE=1` or `GIT_SHELL_SHOW_STASHES=1` (for example export it in **`.zshrc`**) to show the stash count.
