@@ -70,8 +70,8 @@ function find_branch() {
         branch=$(git status | grep "^On branch " | cut -d " " -f3)
 
     ## detached
-    elif [[ "$branch_info" =~ '^\(HEAD detached at ([a-zA-Z0-9_\-]+)\)[ ]+[a-zA-Z0-9]+[ ]+.+$' ]]; then
-        branch="detached HEAD ${match[1]}"
+    elif [[ "$branch_info" =~ '^\((HEAD detached at [a-zA-Z0-9_\-\/]+)\)[ ]+[a-zA-Z0-9]+[ ]+.+$' ]]; then
+        branch="${match[1]}"
 
     ## diverged
     elif [[ "$branch_info" =~ '^([a-zA-Z0-9_\-]+)[ ]+[a-zA-Z0-9]+[ ]+\[([0-9A-Za-z_/\-]+): ahead ([0-9]+), behind ([0-9]+)\].+$' ]]; then
