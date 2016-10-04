@@ -73,6 +73,10 @@ function find_branch() {
     elif [[ "$branch_info" =~ '^\((HEAD detached at [a-zA-Z0-9_\-\/]+)\)[ ]+[a-zA-Z0-9]+[ ]+.+$' ]]; then
         branch="${match[1]}"
 
+    ## detached
+    elif [[ "$branch_info" =~ '^\((detached from [a-zA-Z0-9_\-\/]+)\)[ ]+[a-zA-Z0-9]+[ ]+.+$' ]]; then
+        branch="${match[1]}"
+
     ## diverged
     elif [[ "$branch_info" =~ '^([a-zA-Z0-9_\-]+)[ ]+[a-zA-Z0-9]+[ ]+\[([0-9A-Za-z_/\-]+): ahead ([0-9]+), behind ([0-9]+)\].+$' ]]; then
         branch="${match[1]}"
